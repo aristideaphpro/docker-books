@@ -10,9 +10,7 @@ const Book = mongoose.model(
     {
       title: { type: String, required: true },
       author: { type: String, required: true },
-      year: Number,
-      genre: String,
-      isbn: String,
+      pages: { type: Number, required: true },
     },
     { timestamps: true }
   )
