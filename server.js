@@ -4,17 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
-const Book = mongoose.model(
-  "Book",
-  new mongoose.Schema(
-    {
-      title: { type: String, required: true },
-      author: { type: String, required: true },
-      pages: { type: Number, required: true },
-    },
-    { timestamps: true }
-  )
-);
+const Book = require("./models/books");
 
 app.get("/", (req, res) => res.json({ message: "API Livres", status: "ok" }));
 
